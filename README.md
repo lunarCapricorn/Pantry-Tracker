@@ -1,5 +1,7 @@
 # Pantry-Tracker
 
+A simple way to track your groceries and purchased products.
+
 ---
 ## How to set up?
 
@@ -10,4 +12,6 @@
 ---
 ## How to use?
 
-The application excecutes simple CRUD functions to the generated SQLite database.
+Input the data into all fields, and then press Submit.
+
+If you wish to delete one of the records, simply select one of them and press Delete Selected.
