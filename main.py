@@ -60,7 +60,6 @@ class MainWindow(Window):
             products.append(product)
         self.listbox.insert(END, *products)
 
-
     def submit_to_database(self):
         self.error_label.configure(text='')
         product_name = self.name_entry.get()
@@ -79,7 +78,6 @@ class MainWindow(Window):
             session.add(submited_items)
             session.commit()
 
-
     def delete_selected(self):
         Session = sessionmaker(bind=engine)
         session = Session()
@@ -89,13 +87,13 @@ class MainWindow(Window):
         selected_item_text_array = selected_item_text.split(',')
         product = session.query(Product).filter_by(name=selected_item_text_array[0]).one()
 
-
         session.delete(product)
         session.commit()
 
 
 def main() -> None:
     MainWindow()
+
 
 if __name__ == '__main__':
     main()
